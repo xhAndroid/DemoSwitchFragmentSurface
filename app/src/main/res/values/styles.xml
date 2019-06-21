@@ -11,10 +11,10 @@
     <style name="view_small_theme">
         <item name="android:layout_width">190dp</item>
         <item name="android:layout_height">110dp</item>
-        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:layout_marginRight">5dp</item>
-        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">1dp</item>
     </style>
 
 </resources>

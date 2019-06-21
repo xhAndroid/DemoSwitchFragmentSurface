@@ -62,7 +62,7 @@ public final class SwitchLayoutView extends RelativeLayout {
             initChildView();
             if ((this.laySmall != null) && (this.laySmall.getChildCount() == 0) && (this.childSmallView != null)) {
                 this.isSurfaceView = (this.childSmallView instanceof SurfaceView);
-//                this.isNeedRemoveGLView = (((this.childSmallView instanceof SurfaceView)) && (Build.VERSION.SDK_INT < Build.VERSION_CODES.O));
+                ///this.isNeedRemoveGLView = (((this.childSmallView instanceof om.android.opengles.GLFrameSurface)) && (Build.VERSION.SDK_INT < Build.VERSION_CODES.O));
                 this.laySmall.addView(this.childSmallView);
                 // 初始化调用一次，则显示小地图
 //                switchLayout();
@@ -120,8 +120,9 @@ public final class SwitchLayoutView extends RelativeLayout {
     }
 
     private void setChildViewZOverlay(boolean overlay) {
-        if (this.isSurfaceView)
+        if (this.isSurfaceView) {
             ((SurfaceView) this.childSmallView).setZOrderMediaOverlay(overlay);
+        }
     }
 
     public void addSmallView(View view) {
@@ -136,6 +137,6 @@ public final class SwitchLayoutView extends RelativeLayout {
     }
 
     public static abstract interface ISwitchListener {
-        public abstract void onChange(boolean paramBoolean);
+        public abstract void onChange(boolean isSmall);
     }
 }

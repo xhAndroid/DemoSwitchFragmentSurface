@@ -13,8 +13,9 @@
 
         <FrameLayout
             android:id="@+id/a_view"
-            android:layout_width="match_parent"
+            android:layout_width="550dp"
             android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
             android:background="#99FFFF">
 
             <FrameLayout
@@ -34,9 +35,6 @@
     <!-- 点击改变SwitchLayoutView -->
     <View
         android:id="@+id/v_change_click"
-        style="@style/view_small_theme"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
+        style="@style/view_small_theme" />
 
 </RelativeLayout>
